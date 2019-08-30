@@ -65,6 +65,8 @@ You can create a tag, name it my-app and configure the list of IP addresses asso
 
 You then can simply apply one policy at the gateway that says my-app to my-database is allowed. The Controller will automatically push the policies to the gateway. 
 
-
+6. GCE Network Tag Usage
+-------------------------
+Any GCE instance (excluding controller created gateways) that needs to participate in egress control (FQDN, SNAT and FW Egress) have to be tagged as "avx-snat-noip" . The GCE network tag "avx-snat-noip" can be associated during GCE instance creation or by editing an existing instance to add the network tag. 
 
 .. disqus::
